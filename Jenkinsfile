@@ -1,11 +1,11 @@
 pipeline {
     agent {
-        docker {image 'ubuntu'}
+        docker {image 'python:3.7.2'}
     }
     stages {
         stage('Hello') {
             steps {
-                sh 'pwd'
+                cmd 'python main.py'
             }
         }
     }
